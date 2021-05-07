@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getTags, addNewTag } from '../../store/tags';
+import { getTags, addNewTag, deleteTag } from '../../store/tags';
 
 
 const TagPage = () => {
@@ -11,9 +11,8 @@ const TagPage = () => {
     const tags = useSelector(state => state.tags.tags);
 
     useEffect(() => {
-        dispatch(getTags(user.id));
-    }, [user.id]);
-
+        dispatch(getTags());
+    }, []);
 
     const handleSubmit= async (e) => {
       e.preventDefault();
@@ -24,6 +23,14 @@ const TagPage = () => {
 
       dispatch(getTags())
     };
+
+    const handleDelete= async (e, tagId) => {
+        e.preventDefault();
+
+        await dispatch(deleteTag(tagId));
+
+        dispatch(getTags())
+      };
 
     return (
         <div>
@@ -41,7 +48,18 @@ const TagPage = () => {
                 </div>
                 <button type="submit" className="new-tag-submit">Add Tag</button>
             </form>
-            <div></div>
+            <div className="tags-container">
+                {tags && tags.tags.map((tag) => (
+                    <div className="tag-container">
+                        <a href={`/tags/${tag.id}`}>
+                            <h5>{tag.tagName}</h5>
+                        </a>
+                        <form onSubmit={(e) => handleDelete(e, tag.id)}>
+                            <button type="submit" className="tag-delete-button">Delete Tag</button>
+                        </form>
+                    </div>
+                ))}
+            </div>
         </div>
       );
 }

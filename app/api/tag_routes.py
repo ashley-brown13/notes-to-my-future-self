@@ -27,3 +27,11 @@ def post_tag():
         db.session.add(tag)
         db.session.commit()
         return tag.to_dict()
+
+
+@tag_routes.route("/<int:id>/delete", methods=['DELETE'])
+def delete_tag(id):
+    tag = Tag.query.get(id)
+    db.session.delete(tag)
+    db.session.commit()
+    return tag.to_dict()

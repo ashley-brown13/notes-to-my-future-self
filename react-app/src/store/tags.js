@@ -22,9 +22,9 @@ const addTag = (tag) => ({
   tag: tag,
 });
 
-const removeTag = (tagId) => ({
+const removeTag = (tag) => ({
   type: REMOVE_ONE,
-  tagId: tagId
+  tag: tag
 });
 
 export const addNewTag = (payload) => async dispatch => {
@@ -48,6 +48,17 @@ export const getTags = () => async dispatch => {
       dispatch(loadAll(tags))
     }
 }
+
+export const deleteTag = (tagId) => async (dispatch) => {
+    const response = await fetch(`/api/tags/${tagId}/delete`, {
+      method: "DELETE",
+    });
+    if (response.ok) {
+      const tag = await response.json();
+      dispatch(removeTag(tag));
+      return tag;
+    }
+  };
 
 const initialState = { tag: null, tags: null }
 

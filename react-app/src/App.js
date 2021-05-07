@@ -3,7 +3,8 @@ import { useDispatch} from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
-import TagPage from "./components/TagPage"
+import TagPage from "./components/TagPage";
+import CreateNotePage from "./components/CreateNotePage"
 import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 // import { authenticate } from "./services/auth";
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <ProtectedRoute path="/tags" exact={true}>
           <TagPage />
+        </ProtectedRoute>
+        <ProtectedRoute path="/notes" exact={true}>
+          <CreateNotePage />
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true}>
           <h1>My Home Page</h1>
