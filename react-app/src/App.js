@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import TagPage from "./components/TagPage";
-import CreateNotePage from "./components/CreateNotePage"
+import CreateNotePage from "./components/CreateNotePage";
+import SingleNotePage from './components/SingleNotePage';
 import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 // import { authenticate } from "./services/auth";
@@ -39,8 +40,11 @@ function App() {
         <ProtectedRoute path="/tags" exact={true}>
           <TagPage />
         </ProtectedRoute>
-        <ProtectedRoute path="/notes" exact={true}>
+        <ProtectedRoute path="/notes/create" exact={true}>
           <CreateNotePage />
+        </ProtectedRoute>
+        <ProtectedRoute path="/notes/:noteId" exact={true}>
+          <SingleNotePage />
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true}>
           <h1>My Home Page</h1>

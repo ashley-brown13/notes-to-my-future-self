@@ -87,11 +87,10 @@ const CreateNotePage = () => {
                         required
                     >
                         <option value="">--Please choose an option--</option>
-                        <option value="https://i.pinimg.com/originals/49/06/28/4906285407466a32cb95a5340a713c51.jpgt">Vintage Notebook</option>
-                        <option value="https://cdn.hipwallpaper.com/i/73/9/tWmv6C.jpg">New Notebook</option>
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
-                        <option value="https://i.pinimg.com/originals/66/e5/ab/66e5ab07ef0188ace7460e8f2ecc0412.jpg">Music</option>
-                        <option value="https://cdn.wallpapersafari.com/19/95/Rs01ue.jpg">Film</option>
+                        <option value="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg">Gallaxy</option>
+                        <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
+                        <option value="https://www.kindpng.com/picc/m/62-625701_colorful-music-notes-clipart-music-notes-transparent-background.png">Music</option>
                     </select>
                 <label className="add-note-label">Tags:</label>
                     <select
@@ -103,7 +102,7 @@ const CreateNotePage = () => {
                     >
                         <option value="">--Please choose an option--</option>
                         {userTags && userTags.tags.map((tag) => {
-                            return <option key={tag.id} value={tag}>{tag.tagName}</option>
+                            return <option key={tag.id} value={tag.id}>{tag.tagName}</option>
                         })}
                     </select>
                     <button type="submit" className="new-note-submit">Create Note</button>
@@ -158,11 +157,10 @@ const CreateNotePage = () => {
                         required
                     >
                         <option value="">--Please choose an option--</option>
-                        <option value="https://i.pinimg.com/originals/49/06/28/4906285407466a32cb95a5340a713c51.jpgt">Vintage Notebook</option>
-                        <option value="https://cdn.hipwallpaper.com/i/73/9/tWmv6C.jpg">New Notebook</option>
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
-                        <option value="https://i.pinimg.com/originals/66/e5/ab/66e5ab07ef0188ace7460e8f2ecc0412.jpg">Music</option>
-                        <option value="https://cdn.wallpapersafari.com/19/95/Rs01ue.jpg">Film</option>
+                        <option value="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg">Gallaxy</option>
+                        <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
+                        <option value="https://www.kindpng.com/picc/m/62-625701_colorful-music-notes-clipart-music-notes-transparent-background.png">Music</option>
                     </select>
                 <label className="add-note-label">Tags:</label>
                     <select
@@ -238,11 +236,10 @@ const CreateNotePage = () => {
                         required
                     >
                         <option value="">--Please choose an option--</option>
-                        <option value="https://i.pinimg.com/originals/49/06/28/4906285407466a32cb95a5340a713c51.jpgt">Vintage Notebook</option>
-                        <option value="https://cdn.hipwallpaper.com/i/73/9/tWmv6C.jpg">New Notebook</option>
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
-                        <option value="https://i.pinimg.com/originals/66/e5/ab/66e5ab07ef0188ace7460e8f2ecc0412.jpg">Music</option>
-                        <option value="https://cdn.wallpapersafari.com/19/95/Rs01ue.jpg">Film</option>
+                        <option value="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg">Gallaxy</option>
+                        <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
+                        <option value="https://www.kindpng.com/picc/m/62-625701_colorful-music-notes-clipart-music-notes-transparent-background.png">Music</option>
                     </select>
                 <label className="add-note-label">Tags:</label>
                     <select

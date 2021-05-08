@@ -49,6 +49,14 @@ export const getNotes = () => async dispatch => {
     }
 }
 
+export const getNote = (noteId) => async dispatch => {
+    const response = await fetch(`/api/notes/${noteId}`);
+    if(response.ok) {
+      const note = await response.json();
+      dispatch(loadOne(note))
+    }
+}
+
 export const deleteNote = (noteId) => async (dispatch) => {
     const response = await fetch(`/api/notes/${noteId}/delete`, {
       method: "DELETE",
@@ -60,6 +68,14 @@ export const deleteNote = (noteId) => async (dispatch) => {
     }
   };
 
+  function generate(spotifyLink){
+    let copy = ""
+    let first = spotifyLink.slice(0, 25)
+    let second = "embed/"
+    let third = spotifyLink.slice(25, 56)
+    return copy + first + second + third
+  }
+
 const initialState = { note: null, notes: null }
 
 const notesReducer = (state = initialState, action) => {
@@ -68,6 +84,10 @@ const notesReducer = (state = initialState, action) => {
     case LOAD_ONE:
         newState = Object.assign({}, state);
         newState.note = action.note;
+        if(newState.note.note.spotifyLink){
+            let fixedLink = generate(newState.note.note.spotifyLink)
+            newState.note.fixedLink = fixedLink
+        }
         return newState
     case LOAD_ALL:
         newState = Object.assign({}, state);

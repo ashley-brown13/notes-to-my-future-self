@@ -1,0 +1,11 @@
+.text-note {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.music-note-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
