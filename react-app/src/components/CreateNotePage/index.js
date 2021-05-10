@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addNewNote } from '../../store/notes';
 import { getTags } from '../../store/tags';
+import './CreateNotePage.css'
 
 const CreateNotePage = () => {
     const dispatch = useDispatch();
@@ -41,8 +42,33 @@ const CreateNotePage = () => {
 
     if (noteType === "text") {
         content = (
-            <div>
-                <form onSubmit={handleSubmit}>
+            <div className='new-note-help-and-form'>
+                <div className="note-help">
+                    <h3 className="help-heading">Background Choices</h3>
+                    <div className="background-choices">
+                        <div>
+                            <div>
+                                <img className="background-thumbnail" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
+                                <p>Rainbow</p>
+                            </div>
+                            <div>
+                                <img className="background-thumbnail" src="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg"/>
+                                <p>Galaxy</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img className="background-thumbnail" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
+                                <p>Clouds</p>
+                            </div>
+                            <div>
+                                <img className="background-thumbnail" src="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png"/>
+                                <p>Music</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form onSubmit={handleSubmit} className="note-form">
                 <label className="add-note-label">Title:</label>
                     <input
                         type="text"
@@ -71,7 +97,7 @@ const CreateNotePage = () => {
                 <label className="add-note-label">Note Body:</label>
                     <textarea
                         type="text"
-                        className="new-note-input"
+                        className="new-note-body-input"
                         name="noteBody"
                         onChange={(e) => setNoteBody(e.target.value)}
                         value={noteBody}
@@ -80,7 +106,7 @@ const CreateNotePage = () => {
                 <label className="add-note-label">Background:</label>
                     <select
                         type="text"
-                        className="new-note-input"
+                        className="new-note-select-input"
                         name="background"
                         onChange={(e) => setBackground(e.target.value)}
                         value={background}
@@ -90,12 +116,12 @@ const CreateNotePage = () => {
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
                         <option value="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg">Gallaxy</option>
                         <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
-                        <option value="https://www.kindpng.com/picc/m/62-625701_colorful-music-notes-clipart-music-notes-transparent-background.png">Music</option>
+                        <option value="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png">Music</option>
                     </select>
                 <label className="add-note-label">Tags:</label>
                     <select
                         type="text"
-                        className="new-note-input"
+                        className="new-note-select-input"
                         name="tags"
                         onChange={(e) => setTags(e.target.value)}
                         value={tags}
@@ -111,8 +137,33 @@ const CreateNotePage = () => {
         )
       } else if (noteType === "music") {
         content = (
-            <div>
-                <form onSubmit={handleSubmit}>
+            <div className='new-note-help-and-form'>
+                <div className="note-help">
+                    <h3 className="help-heading">Background Choices</h3>
+                    <div className="background-choices">
+                        <div>
+                            <div>
+                                <img className="background-thumbnail" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
+                                <p>Rainbow</p>
+                            </div>
+                            <div>
+                                <img className="background-thumbnail" src="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg"/>
+                                <p>Galaxy</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img className="background-thumbnail" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
+                                <p>Clouds</p>
+                            </div>
+                            <div>
+                                <img className="background-thumbnail" src="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png"/>
+                                <p>Music</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form onSubmit={handleSubmit} className="note-form">
                 <label className="add-note-label">Title:</label>
                     <input
                         type="text"
@@ -141,7 +192,7 @@ const CreateNotePage = () => {
                 <label className="add-note-label">Note Body:</label>
                     <textarea
                         type="text"
-                        className="new-note-input"
+                        className="new-note-body-input"
                         name="noteBody"
                         onChange={(e) => setNoteBody(e.target.value)}
                         value={noteBody}
@@ -150,7 +201,7 @@ const CreateNotePage = () => {
                 <label className="add-note-label">Background:</label>
                     <select
                         type="text"
-                        className="new-note-input"
+                        className="new-note-select-input"
                         name="background"
                         onChange={(e) => setBackground(e.target.value)}
                         value={background}
@@ -160,12 +211,12 @@ const CreateNotePage = () => {
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
                         <option value="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg">Gallaxy</option>
                         <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
-                        <option value="https://www.kindpng.com/picc/m/62-625701_colorful-music-notes-clipart-music-notes-transparent-background.png">Music</option>
+                        <option value="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png">Music</option>
                     </select>
                 <label className="add-note-label">Tags:</label>
                     <select
                         type="text"
-                        className="new-note-input"
+                        className="new-note-select-input"
                         name="tags"
                         onChange={(e) => setTags(e.target.value)}
                         value={tags}
@@ -178,7 +229,7 @@ const CreateNotePage = () => {
                 <label className="add-note-label">Spotify Link:</label>
                     <input
                         type="text"
-                        className="new-note-input"
+                        className="new-note-select-input"
                         name="title"
                         onChange={(e) => setSpotifyLink(e.target.value)}
                         value={spotifyLink}
@@ -190,8 +241,33 @@ const CreateNotePage = () => {
         )
       } else if (noteType === "video") {
         content = (
-            <div>
-                <form onSubmit={handleSubmit}>
+            <div className='new-note-help-and-form'>
+                <div className="note-help">
+                    <h3 className="help-heading">Background Choices</h3>
+                    <div className="background-choices">
+                        <div>
+                            <div>
+                                <img className="background-thumbnail" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
+                                <p>Rainbow</p>
+                            </div>
+                            <div>
+                                <img className="background-thumbnail" src="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg"/>
+                                <p>Galaxy</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img className="background-thumbnail" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
+                                <p>Clouds</p>
+                            </div>
+                            <div>
+                                <img className="background-thumbnail" src="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png"/>
+                                <p>Music</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form onSubmit={handleSubmit} className="note-form">
                 <label className="add-note-label">Title:</label>
                     <input
                         type="text"
@@ -220,7 +296,7 @@ const CreateNotePage = () => {
                 <label className="add-note-label">Note Body:</label>
                     <textarea
                         type="text"
-                        className="new-note-input"
+                        className="new-note-body-input"
                         name="noteBody"
                         onChange={(e) => setNoteBody(e.target.value)}
                         value={noteBody}
@@ -229,7 +305,7 @@ const CreateNotePage = () => {
                 <label className="add-note-label">Background:</label>
                     <select
                         type="text"
-                        className="new-note-input"
+                        className="new-note-select-input"
                         name="background"
                         onChange={(e) => setBackground(e.target.value)}
                         value={background}
@@ -239,12 +315,12 @@ const CreateNotePage = () => {
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
                         <option value="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg">Gallaxy</option>
                         <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
-                        <option value="https://www.kindpng.com/picc/m/62-625701_colorful-music-notes-clipart-music-notes-transparent-background.png">Music</option>
+                        <option value="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png">Music</option>
                     </select>
                 <label className="add-note-label">Tags:</label>
                     <select
                         type="text"
-                        className="new-note-input"
+                        className="new-note-select-input"
                         name="tags"
                         onChange={(e) => setTags(e.target.value)}
                         value={tags}
@@ -270,7 +346,7 @@ const CreateNotePage = () => {
       }
 
     return (
-        <div>
+        <div className="create-note-page">
             <div>
                 <form className="note-type-form">
                     <label className="note-type-label">Select Note Type:</label>
@@ -280,7 +356,7 @@ const CreateNotePage = () => {
                         value={noteType}
                         onChange={(e) => setNoteType(e.target.value)}>
                         <option value="">--Please choose an option--</option>
-                        <option value="text">Note</option>
+                        <option value="text">Text Note</option>
                         <option value="music">Music Note</option>
                         <option value="video">Video Note</option>
                     </select>

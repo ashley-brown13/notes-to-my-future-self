@@ -3,6 +3,7 @@ import { useDispatch} from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
+import SplashPage from './components/SplashPage';
 import TagPage from "./components/TagPage";
 import CreateNotePage from "./components/CreateNotePage";
 import SingleNotePage from './components/SingleNotePage';
@@ -46,9 +47,9 @@ function App() {
         <ProtectedRoute path="/notes/:noteId" exact={true}>
           <SingleNotePage />
         </ProtectedRoute>
-        <ProtectedRoute path="/" exact={true}>
-          <h1>My Home Page</h1>
-        </ProtectedRoute>
+        <Route path="/" exact={true}>
+          <SplashPage />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

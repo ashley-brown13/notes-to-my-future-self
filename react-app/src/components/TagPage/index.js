@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getTags, addNewTag, deleteTag } from '../../store/tags';
+import './TagPage.css'
 
 
 const TagPage = () => {
     const dispatch = useDispatch();
     const [tagName, setTagName] = useState("");
-    const user = useSelector(state => state.session.user);
     const tags = useSelector(state => state.tags.tags);
 
     useEffect(() => {
@@ -21,6 +21,8 @@ const TagPage = () => {
         };
       await dispatch(addNewTag(payload));
 
+      setTagName("")
+
       dispatch(getTags())
     };
 
@@ -33,7 +35,7 @@ const TagPage = () => {
       };
 
     return (
-        <div>
+        <div className="tag-page">
             <form onSubmit={handleSubmit} className="add-tag-form">
                 <div className="add-tag-container">
                     <label className="add-tag-label">New Tag:</label>
@@ -49,10 +51,11 @@ const TagPage = () => {
                 <button type="submit" className="new-tag-submit">Add Tag</button>
             </form>
             <div className="tags-container">
+                <h1 className="tag-page-header">My Tags</h1>
                 {tags && tags.tags.map((tag) => (
                     <div className="tag-container">
                         <a href={`/tags/${tag.id}`}>
-                            <h5>{tag.tagName}</h5>
+                            <p>{tag.tagName}</p>
                         </a>
                         <form onSubmit={(e) => handleDelete(e, tag.id)}>
                             <button type="submit" className="tag-delete-button">Delete Tag</button>

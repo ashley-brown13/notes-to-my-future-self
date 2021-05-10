@@ -1,0 +1,11 @@
+.splash-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.splash-image {
+    max-width: 1000px;
+    max-height: 500px;
+}

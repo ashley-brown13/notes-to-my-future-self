@@ -1,0 +1,77 @@
+.tag-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.add-tag-form {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    max-width: 700px;
+    background-color: #E6D7AD;
+    border: 1px solid black;
+}
+
+.add-tag-label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.new-tag-input {
+    margin-left: 35px;
+    margin-right: 35px;
+    width: 200px;
+    height: 30px;
+}
+
+.new-tag-submit {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #D7ADE6;
+    border: 1px solid black;
+    font-size: 15px;
+}
+
+.tag-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 700px;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.tags-container {
+    margin-top: 40px;
+}
+
+.tag-delete-button {
+    height: 30px;
+    border: 1px solid black;
+    background-color: #D7ADE6;
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 10px;
+}
+
+.tag-page-header {
+    text-align: center;
+}
+
+.new-note-submit {
+    height: 30px;
+    background-color: #D7ADE6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
