@@ -46,7 +46,7 @@ const CreateNotePage = () => {
                 <div className="note-help">
                     <h3 className="help-heading">Background Choices</h3>
                     <div className="background-choices">
-                        <div>
+                        <div className="background-row">
                             <div>
                                 <img className="background-thumbnail" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
                                 <p>Rainbow</p>
@@ -56,14 +56,24 @@ const CreateNotePage = () => {
                                 <p>Galaxy</p>
                             </div>
                         </div>
-                        <div>
+                        <div className="background-row">
                             <div>
                                 <img className="background-thumbnail" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
                                 <p>Clouds</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png"/>
-                                <p>Music</p>
+                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg"/>
+                                <p>Yellow</p>
+                            </div>
+                        </div>
+                        <div className="background-row">
+                            <div>
+                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg"/>
+                                <p>Pink</p>
+                            </div>
+                            <div>
+                                <img className="background-thumbnail" src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg"/>
+                                <p>Orange</p>
                             </div>
                         </div>
                     </div>
@@ -116,7 +126,9 @@ const CreateNotePage = () => {
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
                         <option value="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg">Gallaxy</option>
                         <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
-                        <option value="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png">Music</option>
+                        <option value="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg">Yellow</option>
+                        <option value="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg">Pink</option>
+                        <option value="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg">Orange</option>
                     </select>
                 <label className="add-note-label">Tags:</label>
                     <select
@@ -141,7 +153,7 @@ const CreateNotePage = () => {
                 <div className="note-help">
                     <h3 className="help-heading">Background Choices</h3>
                     <div className="background-choices">
-                        <div>
+                        <div className="background-row">
                             <div>
                                 <img className="background-thumbnail" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
                                 <p>Rainbow</p>
@@ -151,14 +163,24 @@ const CreateNotePage = () => {
                                 <p>Galaxy</p>
                             </div>
                         </div>
-                        <div>
+                        <div className="background-row">
                             <div>
                                 <img className="background-thumbnail" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
                                 <p>Clouds</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png"/>
-                                <p>Music</p>
+                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg"/>
+                                <p>Yellow</p>
+                            </div>
+                        </div>
+                        <div className="background-row">
+                            <div>
+                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg"/>
+                                <p>Pink</p>
+                            </div>
+                            <div>
+                                <img className="background-thumbnail" src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg"/>
+                                <p>Orange</p>
                             </div>
                         </div>
                     </div>
@@ -211,7 +233,9 @@ const CreateNotePage = () => {
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
                         <option value="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg">Gallaxy</option>
                         <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
-                        <option value="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png">Music</option>
+                        <option value="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg">Yellow</option>
+                        <option value="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg">Pink</option>
+                        <option value="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg">Orange</option>
                     </select>
                 <label className="add-note-label">Tags:</label>
                     <select
@@ -245,7 +269,7 @@ const CreateNotePage = () => {
                 <div className="note-help">
                     <h3 className="help-heading">Background Choices</h3>
                     <div className="background-choices">
-                        <div>
+                        <div className="background-row">
                             <div>
                                 <img className="background-thumbnail" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
                                 <p>Rainbow</p>
@@ -255,14 +279,24 @@ const CreateNotePage = () => {
                                 <p>Galaxy</p>
                             </div>
                         </div>
-                        <div>
+                        <div className="background-row">
                             <div>
                                 <img className="background-thumbnail" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
                                 <p>Clouds</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png"/>
-                                <p>Music</p>
+                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg"/>
+                                <p>Yellow</p>
+                            </div>
+                        </div>
+                        <div className="background-row">
+                            <div>
+                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg"/>
+                                <p>Pink</p>
+                            </div>
+                            <div>
+                                <img className="background-thumbnail" src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg"/>
+                                <p>Orange</p>
                             </div>
                         </div>
                     </div>
@@ -315,7 +349,9 @@ const CreateNotePage = () => {
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
                         <option value="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg">Gallaxy</option>
                         <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
-                        <option value="https://cdn-images.audioaddict.com/8/e/b/d/f/8/8ebdf87f34ee623c96b26086d2e248c7.png">Music</option>
+                        <option value="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg">Yellow</option>
+                        <option value="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg">Pink</option>
+                        <option value="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg">Orange</option>
                     </select>
                 <label className="add-note-label">Tags:</label>
                     <select

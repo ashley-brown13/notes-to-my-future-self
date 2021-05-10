@@ -16,15 +16,9 @@ class Note(db.Model):
     spotifyLink = db.Column(db.String(256), nullable=True)
     videoLink = db.Column(db.String(256), nullable=True)
     userId = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
-    # type = db.Column(db.String(20))
 
     tags = db.relationship("Tag", secondary=tagsOnNotes, back_populates="notes")
     user = db.relationship("User", back_populates="notes")
-
-    # __mapper_args__ = {
-    #     'polymorphic_on': type,
-    #     'polymorphic_identity': 'text'
-    # }
 
     def to_dict(self):
         return {
@@ -36,24 +30,7 @@ class Note(db.Model):
             "background": self.background,
             "createdAt": self.createdAt,
             "updatedAt": self.updatedAt,
-            # "type": self.type,
             "spotifyLink": self.spotifyLink,
             "videoLink": self.videoLink,
             "userId": self.userId
         }
-
-
-# class Playlist(Note):
-#     spotifyLink = db.Column(db.String(256), nullable=True)
-
-#     __mapper_args__ = {
-#         'polymorphic_identity': 'playlist'
-#     }
-
-
-# class Video(Note):
-#     videoLink = db.Column(db.String(256), nullable=True)
-
-#     __mapper_args__ = {
-#         'polymorphic_identity': 'video'
-#     }
