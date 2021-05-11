@@ -51,3 +51,11 @@ def get_note(id):
     note = Note.query.get(id)
     tags = note.tags
     return {"note": note.to_dict(), "tags": [tag.to_dict() for tag in tags]}
+
+
+@note_routes.route('/<int:id>/delete', methods=['DELETE'])
+def delete_note(id):
+    note = Note.query.get(id)
+    db.session.delete(note)
+    db.session.commit()
+    return note.to_dict()

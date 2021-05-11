@@ -1,8 +1,8 @@
-"""turned the table into reg
+"""first shot
 
-Revision ID: ae172f041b62
-Revises: 759f1f113353
-Create Date: 2021-05-05 10:12:04.824291
+Revision ID: 086e821f822c
+Revises: 
+Create Date: 2021-05-11 13:23:50.090110
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'ae172f041b62'
-down_revision = '759f1f113353'
+revision = '086e821f822c'
+down_revision = None
 branch_labels = None
 depends_on = None
 
@@ -39,7 +39,6 @@ def upgrade():
     sa.Column('spotifyLink', sa.String(length=256), nullable=True),
     sa.Column('videoLink', sa.String(length=256), nullable=True),
     sa.Column('userId', sa.Integer(), nullable=False),
-    sa.Column('type', sa.String(length=20), nullable=True),
     sa.ForeignKeyConstraint(['userId'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )

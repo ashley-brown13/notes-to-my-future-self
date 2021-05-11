@@ -13,7 +13,7 @@ const SingleTagPage = () => {
 
     useEffect(() => {
         dispatch(getTag(tagId));
-    }, []);
+    }, [tagId]);
 
     return (
         <div className="tag-notes-page">

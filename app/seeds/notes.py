@@ -9,6 +9,9 @@ def seed_notes():
     tag4 = Tag.query.get(4)
     tag5 = Tag.query.get(5)
     tag6 = Tag.query.get(6)
+    tag7 = Tag.query.get(7)
+    tag8 = Tag.query.get(8)
+    tag9 = Tag.query.get(9)
 
     note1 = Note(title='Store Bought Cookies',
                  noteBody='Never buy pre-made cookies. They have no flavor! You have tried MANY different flavors, but they are all just super mediocre.',
@@ -63,7 +66,7 @@ def seed_notes():
                  greeting='Hey there Delilah!',
                  closing='- Love Past Delilah',
                  noteBody='LA Art walk is no longer good. It has not been for the past three time you have attempted it. Remember the good times--the fire throwers, the concert that shut down the middle of the street, the wine being served freely. It was beautiful and great for a time, and now, you must lay it to rest.',
-                 background="https://cdn.hipwallpaper.com/i/57/82/W15Tai.jpg",
+                 background="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg",
                  createdAt='2018/07/13',
                  updatedAt='2018/07/13',
                  userId=1
@@ -85,6 +88,7 @@ def seed_notes():
                   )
 
     note11.tags.append(tag5)
+    note11.tags.append(tag7)
     db.session.add(note11)
 
     note16 = Note(title='Drinking Out of Cups is Forever Funny',
