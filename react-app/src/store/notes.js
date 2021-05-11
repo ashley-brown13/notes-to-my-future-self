@@ -76,6 +76,13 @@ export const deleteNote = (noteId) => async (dispatch) => {
     return copy + first + second + third
   }
 
+  function generateVideo(videoLink){
+      let copy = ""
+      let first = "https://www.youtube.com/embed/"
+      let second = videoLink.slice(32)
+      return copy + first + second
+  }
+
 const initialState = { note: null, notes: null }
 
 const notesReducer = (state = initialState, action) => {
@@ -87,6 +94,10 @@ const notesReducer = (state = initialState, action) => {
         if(newState.note.note.spotifyLink){
             let fixedLink = generate(newState.note.note.spotifyLink)
             newState.note.fixedLink = fixedLink
+        }
+        if(newState.note.note.videoLink){
+            let fixedVideoLink = generateVideo(newState.note.note.videoLink)
+            newState.note.fixedVideoLink = fixedVideoLink
         }
         return newState
     case LOAD_ALL:

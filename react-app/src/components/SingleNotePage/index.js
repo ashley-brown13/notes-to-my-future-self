@@ -23,18 +23,23 @@ const SingleNotePage = () => {
                 <div className="music-note-page">
                     <iframe src={note.fixedLink} width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     <div>
-                        <TextNote note={note.note}/>
+                        <TextNote note={note.note} tags={note.tags}/>
                     </div>
                 </div>
             )
-        } else if (note.videoLink){
+        } else if (note.note.videoLink){
             content = (
-                <div></div>
+                <div className="video-note-page">
+                    <iframe width="560" height="315" className="video" src={note.fixedVideoLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <div>
+                        <TextNote note={note.note} tags={note.tags}/>
+                    </div>
+                </div>
             )
         } else {
             content = (
                 <div className="text-note">
-                    <TextNote note={note.note}/>
+                    <TextNote note={note.note} tags={note.tags}/>
                 </div>
             )
         }

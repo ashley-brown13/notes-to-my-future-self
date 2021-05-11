@@ -64,6 +64,11 @@
     font-size: 20px;
 }
 
+.new-note-select-input-multiple {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
 .new-note-submit {
     font-family: Georgia, 'Times New Roman', Times, serif;
     height: 30px;

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import './TextNote.css'
 
-const TextNote = ({note}) => {
+const TextNote = ({note, tags}) => {
+
     return (
         <div className="text-note-container"
              style={{
@@ -14,6 +15,11 @@ const TextNote = ({note}) => {
                 <div>{note.noteBody}</div>
                 <h4>{note.closing}</h4>
                 <div>{note.createdAt.slice(5, 16)}</div>
+                <div className="note-tags">
+                    {tags.map((tag) => {
+                        return <a href={`/tags/${tag.id}`}>#{tag.tagName}&nbsp;</a>
+                    })}
+                </div>
             </div>
         </div>
     )

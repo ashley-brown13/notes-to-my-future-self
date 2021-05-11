@@ -133,12 +133,13 @@ const CreateNotePage = () => {
                 <label className="add-note-label">Tags:</label>
                     <select
                         type="text"
-                        className="new-note-select-input"
+                        className="new-note-select-input-multiple"
                         name="tags"
+                        multiple={true}
                         onChange={(e) => setTags(e.target.value)}
                         value={tags}
                     >
-                        <option value="">--Please choose an option--</option>
+                        {/* <option value="">--Please choose an option--</option> */}
                         {userTags && userTags.tags.map((tag) => {
                             return <option key={tag.id} value={tag.id}>{tag.tagName}</option>
                         })}

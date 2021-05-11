@@ -8,4 +8,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 60px;
+}
+
+.video-note-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.video {
+    margin-bottom: 20px;
 }
