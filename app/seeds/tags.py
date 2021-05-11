@@ -9,7 +9,7 @@ def seed_tags():
             Tag(tagName="LAUGH", userId=1),
             Tag(tagName="Life Lessons", userId=1),
             Tag(tagName="Chef D", userId=1),
-            Tag(tagName="Concert Nights", userId=1)
+            Tag(tagName="Concert Nights", userId=1),
             Tag(tagName="Restaurants", userId=1)
            ]
 

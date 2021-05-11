@@ -7,6 +7,7 @@ import SplashPage from './components/SplashPage';
 import TagPage from "./components/TagPage";
 import CreateNotePage from "./components/CreateNotePage";
 import SingleNotePage from './components/SingleNotePage';
+import TextNotesPage from './components/TextNotesPage'
 import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 // import { authenticate } from "./services/auth";
@@ -40,6 +41,9 @@ function App() {
         </Route>
         <ProtectedRoute path="/tags" exact={true}>
           <TagPage />
+        </ProtectedRoute>
+        <ProtectedRoute path="/notes/text" exact={true}>
+          <TextNotesPage />
         </ProtectedRoute>
         <ProtectedRoute path="/notes/create" exact={true}>
           <CreateNotePage />

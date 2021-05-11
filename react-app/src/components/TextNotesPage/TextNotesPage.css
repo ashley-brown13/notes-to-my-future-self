@@ -1,0 +1,5 @@
+.text-notes-page {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
