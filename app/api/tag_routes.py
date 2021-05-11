@@ -13,6 +13,13 @@ def get_tags():
     return {"tags": [tag.to_dict() for tag in tags]}
 
 
+@tag_routes.route('/<int:id>')
+def get_tag_posts(id):
+    tag = Tag.query.get(id)
+    notes = tag.notes
+    return {"notes": [note.to_dict() for note in notes]}
+
+
 @tag_routes.route('/create', methods=['POST'])
 def post_tag():
     form = TagForm()

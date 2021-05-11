@@ -5,9 +5,12 @@ import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import SplashPage from './components/SplashPage';
 import TagPage from "./components/TagPage";
+import SingleTagPage from "./components/SingleTagPage";
 import CreateNotePage from "./components/CreateNotePage";
 import SingleNotePage from './components/SingleNotePage';
-import TextNotesPage from './components/TextNotesPage'
+import TextNotesPage from './components/TextNotesPage';
+import MusicNotesPage from './components/MusicNotesPage';
+import VideoNotesPage from './components/VideoNotesPage';
 import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 // import { authenticate } from "./services/auth";
@@ -42,8 +45,17 @@ function App() {
         <ProtectedRoute path="/tags" exact={true}>
           <TagPage />
         </ProtectedRoute>
+        <ProtectedRoute path="/tags/:tagId" exact={true}>
+          <SingleTagPage />
+        </ProtectedRoute>
         <ProtectedRoute path="/notes/text" exact={true}>
           <TextNotesPage />
+        </ProtectedRoute>
+        <ProtectedRoute path="/notes/music" exact={true}>
+          <MusicNotesPage />
+        </ProtectedRoute>
+        <ProtectedRoute path="/notes/video" exact={true}>
+          <VideoNotesPage />
         </ProtectedRoute>
         <ProtectedRoute path="/notes/create" exact={true}>
           <CreateNotePage />

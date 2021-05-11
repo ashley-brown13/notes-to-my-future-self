@@ -49,6 +49,14 @@ export const getTags = () => async dispatch => {
     }
 }
 
+export const getTag = (id) => async dispatch => {
+    const response = await fetch(`/api/tags/${id}`);
+    if(response.ok) {
+      const tag = await response.json();
+      dispatch(loadOne(tag))
+    }
+}
+
 export const deleteTag = (tagId) => async (dispatch) => {
     const response = await fetch(`/api/tags/${tagId}/delete`, {
       method: "DELETE",

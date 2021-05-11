@@ -17,9 +17,9 @@ def get_notes():
     for note in notes:
         fixedNote = note.to_dict()
         if note.spotifyLink:
-            playlists.append(fixedNote)
+            playlistNotes.append(fixedNote)
         elif note.videoLink:
-            videos.append(fixedNote)
+            videoNotes.append(fixedNote)
         else:
             textNotes.append(fixedNote)
     return {"textNotes": textNotes, "playlistNotes": playlistNotes, "videoNotes": videoNotes}

@@ -50,7 +50,7 @@ def seed_notes():
                  greeting='Hola Delilah!',
                  closing='- Love Past Delilah',
                  noteBody='Sour cream is wayyyy too watery. Everytime you add it to your salad, you regret it. Good in theory, not in execution.',
-                 background="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg",
+                 background="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg",
                  createdAt='2020/03/18',
                  updatedAt='2020/03/18',
                  userId=1
@@ -72,6 +72,20 @@ def seed_notes():
     note5.tags.append(tag1)
     note5.tags.append(tag3)
     db.session.add(note5)
+
+    note11 = Note(title="All you'll hear is sound...",
+                  greeting='Hey Hey!',
+                  closing='- Love Past Delilah',
+                  noteBody='Remember the moment when Sylvan Esso came on. You were not expecting it. You stood in the middle of the room, no one too close to you, when you first heard the opening notes. It was breathtaking. You closed your eyes, and the meaning of the song was so spot on. All you heard and felt was sound. You lived in that song! Never stop having these moments!',
+                  background="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg",
+                  createdAt='2017/09/11',
+                  updatedAt='2017/09/11',
+                  spotifyLink='https://open.spotify.com/track/4R0N3Ba0QMWeuG57THGTF9?si=16862a52fdff474b',
+                  userId=1
+                  )
+
+    note11.tags.append(tag5)
+    db.session.add(note11)
 
     note16 = Note(title='Drinking Out of Cups is Forever Funny',
                   greeting='Hello Delilah!',
