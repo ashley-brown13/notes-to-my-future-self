@@ -43,7 +43,7 @@ const TextNote = ({note, tags}) => {
                     <form onSubmit={handleDelete}>
                         <button type="submit" className="note-button">Delete Note</button>
                     </form>
-                    <a href={`/${note.id}/edit`}><button className="note-button">Edit Note</button></a>
+                    <a href={`/notes/${note.id}/edit`}><button className="note-button">Edit Note</button></a>
                 </div>
             </div>
         </div>

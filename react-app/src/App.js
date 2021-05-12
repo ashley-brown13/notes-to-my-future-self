@@ -7,6 +7,7 @@ import SplashPage from './components/SplashPage';
 import TagPage from "./components/TagPage";
 import SingleTagPage from "./components/SingleTagPage";
 import CreateNotePage from "./components/CreateNotePage";
+import EditNotePage from './components/EditNotePage';
 import SingleNotePage from './components/SingleNotePage';
 import TextNotesPage from './components/TextNotesPage';
 import MusicNotesPage from './components/MusicNotesPage';
@@ -59,6 +60,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/notes/create" exact={true}>
           <CreateNotePage />
+        </ProtectedRoute>
+        <ProtectedRoute path="/notes/:noteId/edit" exact={true}>
+          <EditNotePage />
         </ProtectedRoute>
         <ProtectedRoute path="/notes/:noteId" exact={true}>
           <SingleNotePage />

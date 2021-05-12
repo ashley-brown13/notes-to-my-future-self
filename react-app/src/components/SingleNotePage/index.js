@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { getNote, deleteNote } from '../../store/notes';
+import { getNote } from '../../store/notes';
 import TextNote from '../TextNote';
 import './SingleNotePage.css'
 

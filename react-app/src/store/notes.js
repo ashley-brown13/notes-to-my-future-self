@@ -41,6 +41,20 @@ export const addNewNote = (payload) => async dispatch => {
     return note;
 }
 
+export const editNote = (payload, noteId) => async dispatch => {
+    const response = await fetch(`/api/notes/${noteId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-type": "application/json; charset=UTF8"
+      },
+      body: JSON.stringify(payload),
+    });
+    if (!response.ok) throw response;
+    const note = await response.json();
+    dispatch(addNote(note));
+    return note;
+}
+
 export const getNotes = () => async dispatch => {
     const response = await fetch(`/api/notes`);
     if(response.ok) {
