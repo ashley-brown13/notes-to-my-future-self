@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { editNote, getNote } from '../../store/notes';
 import { useHistory, useParams } from 'react-router-dom';
+import { getTags } from '../../store/tags';
 import './EditNotePage.css'
 
 const EditNotePage = () => {
@@ -21,6 +22,7 @@ const EditNotePage = () => {
 
     useEffect(() => {
         dispatch(getNote(noteId));
+        dispatch(getTags());
     }, [noteId]);
 
     useEffect(() => {

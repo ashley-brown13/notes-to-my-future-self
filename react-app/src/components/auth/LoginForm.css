@@ -1,0 +1,23 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: flex-end;
+    max-width: 300px;
+    margin-top: 60px;
+    background-color: #D7ADE6;
+    padding: 30px;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+}
+
+.login-label-input {
+    margin-bottom: 20px;
+}
+
+.login-input {
+    margin-left: 10px;
+}
