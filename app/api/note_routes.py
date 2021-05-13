@@ -46,6 +46,31 @@ def post_note():
         return note.to_dict()
 
 
+@note_routes.route('/<int:id>/edit', methods=['PATCH'])
+def edit_note(id):
+    note = Note.query.get(id)
+    body = request.get_json()
+    if note:
+        note.title = body['title']
+        note.greeting = body['greeting']
+        note.closing = body['closing']
+        note.noteBody = body['noteBody']
+        note.background = body['background']
+        note.updatedAt = datetime.date.today()
+        note.tags = []
+        tagIds = body['tags']
+        for tagId in tagIds:
+            tag = Tag.query.get(tagId)
+            note.tags.append(tag)
+        if body['spotifyLink']:
+            note.spotifyLink = body['spotifyLink']
+        if body['videoLink']:
+            note.videoLink = body['videoLink']
+        db.session.add(note)
+        db.session.commit()
+        return note.to_dict()
+
+
 @note_routes.route('/<int:id>')
 def get_note(id):
     note = Note.query.get(id)

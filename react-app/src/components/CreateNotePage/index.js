@@ -23,6 +23,11 @@ const CreateNotePage = () => {
         dispatch(getTags());
     }, []);
 
+    const handleChange = (e) => {
+        let value = Array.from(e.target.selectedOptions, option => option.value);
+        setTags(value);
+      }
+
     const handleSubmit= async (e) => {
       e.preventDefault();
       const payload = {
@@ -55,31 +60,31 @@ const CreateNotePage = () => {
                     <div className="background-choices">
                         <div className="background-row">
                             <div>
-                                <img className="background-thumbnail" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
                                 <p>Rainbow</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg"/>
                                 <p>Galaxy</p>
                             </div>
                         </div>
                         <div className="background-row">
                             <div>
-                                <img className="background-thumbnail" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
                                 <p>Clouds</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg"/>
                                 <p>Yellow</p>
                             </div>
                         </div>
                         <div className="background-row">
                             <div>
-                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg"/>
                                 <p>Pink</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg"/>
                                 <p>Orange</p>
                             </div>
                         </div>
@@ -143,7 +148,7 @@ const CreateNotePage = () => {
                         className="new-note-select-input-multiple"
                         name="tags"
                         multiple={true}
-                        onChange={(e) => setTags(e.target.value)}
+                        onChange={handleChange}
                         value={tags}
                     >
                         {/* <option value="">--Please choose an option--</option> */}
@@ -163,31 +168,31 @@ const CreateNotePage = () => {
                     <div className="background-choices">
                         <div className="background-row">
                             <div>
-                                <img className="background-thumbnail" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
                                 <p>Rainbow</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg"/>
                                 <p>Galaxy</p>
                             </div>
                         </div>
                         <div className="background-row">
                             <div>
-                                <img className="background-thumbnail" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
                                 <p>Clouds</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg"/>
                                 <p>Yellow</p>
                             </div>
                         </div>
                         <div className="background-row">
                             <div>
-                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg"/>
                                 <p>Pink</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg"/>
                                 <p>Orange</p>
                             </div>
                         </div>
@@ -251,7 +256,7 @@ const CreateNotePage = () => {
                         className="new-note-select-input-multiple"
                         name="tags"
                         multiple={true}
-                        onChange={(e) => setTags(e.target.value)}
+                        onChange={handleChange}
                         value={tags}
                     >
                         {/* <option value="">--Please choose an option--</option> */}
@@ -280,31 +285,31 @@ const CreateNotePage = () => {
                     <div className="background-choices">
                         <div className="background-row">
                             <div>
-                                <img className="background-thumbnail" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://wallpapercave.com/wp/wp3477365.jpg"/>
                                 <p>Rainbow</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg"/>
                                 <p>Galaxy</p>
                             </div>
                         </div>
                         <div className="background-row">
                             <div>
-                                <img className="background-thumbnail" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg"/>
                                 <p>Clouds</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg"/>
                                 <p>Yellow</p>
                             </div>
                         </div>
                         <div className="background-row">
                             <div>
-                                <img className="background-thumbnail" src="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg"/>
                                 <p>Pink</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg"/>
                                 <p>Orange</p>
                             </div>
                         </div>
@@ -368,7 +373,7 @@ const CreateNotePage = () => {
                         className="new-note-select-input-multiple"
                         name="tags"
                         multiple={true}
-                        onChange={(e) => setTags(e.target.value)}
+                        onChange={handleChange}
                         value={tags}
                     >
                         {/* <option value="">--Please choose an option--</option> */}

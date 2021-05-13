@@ -11,13 +11,13 @@ const NavBar = () => {
     let content = null
     if(!user){
         content = (
-            <div>
+            <div className="nav-login-signup">
                 <div>
                     <NavLink to="/login" exact={true} activeClassName="active" className="link">
                     Login
                     </NavLink>
                 </div>
-                <div>
+                <div className="nav-signup">
                     <NavLink to="/sign-up" exact={true} activeClassName="active" className="link">
                     Sign Up
                     </NavLink>

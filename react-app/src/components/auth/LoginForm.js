@@ -39,29 +39,29 @@ const LoginForm = () => {
           <div>{error}</div>
         ))}
       </div>
-      <div className="login-label-input">
-        <label htmlFor="email">Email</label>
-        <input
-          name="email"
-          type="text"
-          className="login-input"
-          placeholder="Email"
-          value={email}
-          onChange={updateEmail}
-        />
+      <div className="login-email-password">
+        <div className="login-label-input">
+            <label htmlFor="email" className="login-label">Email</label>
+            <input
+            name="email"
+            type="text"
+            className="login-input"
+            value={email}
+            onChange={updateEmail}
+            />
+        </div>
+        <div className="login-label-input">
+            <label htmlFor="password" className="login-label">Password</label>
+            <input
+            name="password"
+            type="password"
+            className="login-input"
+            value={password}
+            onChange={updatePassword}
+            />
+        </div>
       </div>
-      <div className="login-label-input">
-        <label htmlFor="password">Password</label>
-        <input
-          name="password"
-          type="password"
-          className="login-input"
-          placeholder="Password"
-          value={password}
-          onChange={updatePassword}
-        />
-      </div>
-      <button type="submit">Login</button>
+      <button type="submit" className="login-button">Login</button>
     </form>
     </div>
   );

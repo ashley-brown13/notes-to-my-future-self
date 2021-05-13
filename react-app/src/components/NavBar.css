@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: lightblue;
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 10px;
 }
 
@@ -46,4 +46,12 @@
 .the-nav {
     background-color: lightblue;
     margin: -10px;
+}
+
+.nav-login-signup {
+    display: flex;
+}
+
+.nav-signup {
+    margin-left: 30px;
 }

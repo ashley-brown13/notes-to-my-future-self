@@ -42,7 +42,7 @@ export const addNewNote = (payload) => async dispatch => {
 }
 
 export const editNote = (payload, noteId) => async dispatch => {
-    const response = await fetch(`/api/notes/${noteId}`, {
+    const response = await fetch(`/api/notes/${noteId}/edit`, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json; charset=UTF8"

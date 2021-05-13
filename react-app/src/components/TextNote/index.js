@@ -33,7 +33,7 @@ const TextNote = ({note, tags}) => {
                 <h4>{note.greeting}</h4>
                 <div>{note.noteBody}</div>
                 <h4>{note.closing}</h4>
-                <div>{note.createdAt.slice(5, 16)}</div>
+                <div>{note.updatedAt.slice(5, 16)}</div>
                 <div className="note-tags">
                     {tags.map((tag) => {
                         return <a href={`/tags/${tag.id}`}>#{tag.tagName}&nbsp;</a>

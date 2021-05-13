@@ -26,12 +26,19 @@ const EditNotePage = () => {
     }, [noteId]);
 
     useEffect(() => {
-        setTitle(note?.note.title)
-        setGreeting(note?.note.greeting)
-        setClosing(note?.note.closing)
-        setNoteBody(note?.note.noteBody)
-        setBackground(note?.note.background)
+        setTitle(note?.note?.title)
+        setGreeting(note?.note?.greeting)
+        setClosing(note?.note?.closing)
+        setNoteBody(note?.note?.noteBody)
+        setBackground(note?.note?.background)
+        setSpotifyLink(note?.note?.spotifyLink)
+        setVideoLink(note?.note?.videoLink)
       }, [note])
+
+    const handleChange = (e) => {
+        let value = Array.from(e.target.selectedOptions, option => option.value);
+        setTags(value);
+      }
 
     const handleSubmit= async (e) => {
       e.preventDefault();
@@ -57,37 +64,38 @@ const EditNotePage = () => {
 
     let content = null;
 
-    // if (note.spotifyLink) {
-    //     content = (
-    //         <div>
-    //             <label className="add-note-label">Spotify Link:</label>
-    //                 <input
-    //                     type="text"
-    //                     className="new-note-select-input"
-    //                     name="title"
-    //                     onChange={(e) => setSpotifyLink(e.target.value)}
-    //                     value={spotifyLink}
-    //                     required
-    //                 ></input>
-    //             <button type="submit" className="new-note-submit">Edit Note</button>
-    //         </div>
-    //     )
-    //   } else if (note.videoLink) {
-    //     content = (
-    //         <div>
-    //             <label className="add-note-label">YouTube Link:</label>
-    //                 <input
-    //                     type="text"
-    //                     className="new-note-input"
-    //                     name="title"
-    //                     onChange={(e) => setVideoLink(e.target.value)}
-    //                     value={videoLink}
-    //                     required
-    //                 ></input>
-    //             <button type="submit" className="new-note-submit">Edit Note</button>
-    //         </div>
-    //     )
-    //   }
+    if(note){
+        if (note?.note?.spotifyLink) {
+            content = (
+                <div className="playlist-input">
+                    <label className="add-note-label">Spotify Link:</label>
+                        <input
+                            type="text"
+                            className="new-note-select-input"
+                            name="title"
+                            onChange={(e) => setSpotifyLink(e.target.value)}
+                            value={spotifyLink}
+                            required
+                        ></input>
+                </div>
+            )
+          } else if (note?.note?.videoLink) {
+            content = (
+                <div className="video-input">
+                    <label className="add-note-label">YouTube Link:</label>
+                        <input
+                            type="text"
+                            className="new-note-input"
+                            name="title"
+                            onChange={(e) => setVideoLink(e.target.value)}
+                            value={videoLink}
+                            required
+                        ></input>
+                </div>
+            )
+          }
+    }
+
 
     return (
         <div className="edit-note-page">
@@ -150,13 +158,14 @@ const EditNotePage = () => {
                         className="new-note-select-input-multiple"
                         name="tags"
                         multiple={true}
-                        onChange={(e) => setTags(e.target.value)}
+                        onChange={handleChange}
                         value={tags}
                     >
                         {userTags && userTags.tags.map((tag) => {
                             return <option key={tag.id} value={tag.id}>{tag.tagName}</option>
                         })}
                     </select>
+                    {content}
                     <button type="submit" className="new-note-submit">Edit Note</button>
                 </form>
             </div>

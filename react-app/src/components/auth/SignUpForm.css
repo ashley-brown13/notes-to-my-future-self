@@ -1,46 +1,44 @@
-.login-email-password {
+.signup-page {
     display: flex;
     flex-direction: column;
-    align-content: space-between;
-    align-items: flex-end;
-}
-
-.login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     max-width: 400px;
     margin-top: 60px;
     background-color: #D7ADE6;
     padding: 60px;
 }
 
-.login-page {
+.signup-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: flex-end;
 }
 
-.login-label-input {
-    margin-bottom: 20px;
-}
-
-.login-input {
+.signup-input {
     margin-left: 20px;
     height: 30px;
     font-size: 20px;
     border: 2px solid black;
+    margin-bottom: 20px;
 }
 
-.login-label {
+.signup-label {
     font-size: 20px;
     font-weight: bold;
 }
 
-.login-button {
+.signup-button {
     height: 35px;
     width: 215px;
     border: 2px solid black;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #ADD8E6;
+}
+
+.total-signup-page {
+    display: flex;
+    justify-content: center;
 }
