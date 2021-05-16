@@ -13,7 +13,8 @@ def seed_tags():
             Tag(tagName="The Restaurant Experience", userId=1),
             Tag(tagName="Chills", userId=1),
             Tag(tagName="I feel like dancing!", userId=1),
-            Tag(tagName="Get moving, Chica!", userId=1)
+            Tag(tagName="Get moving, Chica!", userId=1),
+            Tag(tagName="the feels", userId=1)
            ]
 
     for tag in data:
