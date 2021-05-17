@@ -9,3 +9,17 @@
     max-width: 1000px;
     max-height: 500px;
 }
+
+.splash-paragraph {
+    max-width: 900px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #BCE6AD;
+    margin-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+}
+
+.splash-signup {
+    text-align: center;
+}

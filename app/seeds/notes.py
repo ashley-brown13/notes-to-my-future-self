@@ -91,6 +91,46 @@ def seed_notes():
     note6.tags.append(tag10)
     db.session.add(note6)
 
+    note7 = Note(title='Heavy Exercise: Always Cold Showers!',
+                 greeting='Hey Hey Hey!',
+                 closing='- Love Past Delilah',
+                 noteBody='If you go on an extensive walk or bike ride, make sure to cold shower. It sucks for 60-90 seconds and then, no soreness. It is magical!',
+                 background="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg",
+                 createdAt='2020/07/30',
+                 updatedAt='2020/07/30',
+                 userId=1
+                 )
+
+    note7.tags.append(tag3)
+    note7.tags.append(tag9)
+    db.session.add(note7)
+
+    note8 = Note(title='Painting is colorful therapy',
+                 greeting='Hello Miss Delilah!',
+                 closing='- Love Past Delilah',
+                 noteBody='When you are stressed out, take out your paint brushes. The repetitive motion of strokes on a canvas is incredibly calming. Your brain just shuts down, and all of that stress you are feeling fades away. Also, you get a lot of cool pictures for your walls.',
+                 background="https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg",
+                 createdAt='2018/06/30',
+                 updatedAt='2018/06/30',
+                 userId=1
+                 )
+
+    note8.tags.append(tag3)
+    db.session.add(note8)
+
+    note9 = Note(title='Fun cups make your morning',
+                 greeting='Hola Miss Delilah!',
+                 closing='- Love Morning Delilah',
+                 noteBody='Cups with funny or cute sayings can really make your morning. When you feel tired and you just want to shut your eyes, pulling a fun cup out of the cupboard makes you smile and gives you a little pep in your step. Ones with pictures of friends or family are especially joy bringing!',
+                 background="https://wallpapercave.com/wp/wp3477365.jpg",
+                 createdAt='2017/06/11',
+                 updatedAt='2017/06/11',
+                 userId=1
+                 )
+
+    note9.tags.append(tag3)
+    db.session.add(note9)
+
     note11 = Note(title="All you'll hear is sound...",
                   greeting='Hey Hey!',
                   closing='- Love Past Delilah',
