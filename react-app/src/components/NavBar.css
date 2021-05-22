@@ -50,8 +50,19 @@
 
 .nav-login-signup {
     display: flex;
+    align-items: center;
 }
 
 .nav-signup {
     margin-left: 30px;
+}
+
+.demo-button {
+    height: 30px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 30px;
+    font-weight:bold;
+    border: none;
+    background-color: lightblue;
 }

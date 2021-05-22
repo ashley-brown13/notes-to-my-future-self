@@ -1,12 +1,28 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useHistory, NavLink } from 'react-router-dom';
+import  { useDispatch } from "react-redux";
 import LogoutButton from './auth/LogoutButton';
 import { useSelector } from "react-redux";
+import { login } from "../store/session";
 import './NavBar.css'
 
 
 const NavBar = () => {
+    const dispatch = useDispatch();
+    const history = useHistory();
     const user = useSelector(state => state.session.user);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const onLogin = async (e) => {
+        e.preventDefault();
+        setEmail("demo@aa.io")
+        setPassword("password")
+        const data = await dispatch(login(email, password));
+        if(data){
+            history.push(`/`)
+        }
+      };
 
     let content = null
     if(!user){
@@ -21,6 +37,9 @@ const NavBar = () => {
                     <NavLink to="/sign-up" exact={true} activeClassName="active" className="link">
                     Sign Up
                     </NavLink>
+                </div>
+                <div>
+                    <button className="demo-button" onClick={onLogin}>Demo</button>
                 </div>
             </div>
         )

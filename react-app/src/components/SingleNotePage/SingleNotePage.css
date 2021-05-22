@@ -7,8 +7,18 @@
 .music-note-page {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 60px;
+    padding: 30px;
+}
+
+.music-container {
+    display: flex;
+    align-items: center;
+}
+
+.tags-container {
+    text-align: center;
 }
 
 .video-note-page {

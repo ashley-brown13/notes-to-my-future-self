@@ -19,10 +19,14 @@ const SingleNotePage = () => {
     if(note){
         if(note.note.spotifyLink){
             content = (
-                <div className="music-note-page">
-                    <iframe src={note.fixedLink} title={note.note.title} width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    <div>
-                        <TextNote note={note.note} tags={note.tags}/>
+                <div className="music-container" style={{
+                    backgroundImage: `url(${note.note.background})`
+                }}>
+                    <div className="music-note-page">
+                        <iframe src={note.fixedLink} title={note.note.title} className="music-player" width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <div>
+                            <TextNote note={note.note} tags={note.tags}/>
+                        </div>
                     </div>
                 </div>
             )

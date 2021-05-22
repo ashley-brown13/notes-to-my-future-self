@@ -43,6 +43,10 @@
     width: 700px;
     justify-content: space-between;
     font-size: 20px;
+    border: 2px solid black;
+    padding-left:10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
 }
 
 a {
