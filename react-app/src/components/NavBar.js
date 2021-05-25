@@ -20,7 +20,7 @@ const NavBar = () => {
         setPassword("password")
         const data = await dispatch(login(email, password));
         if(data){
-            history.push(`/`)
+            history.push(`/notes/text`)
         }
       };
 

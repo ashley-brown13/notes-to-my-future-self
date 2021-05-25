@@ -6,15 +6,23 @@
 
 .music-note-page {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     margin-top: 60px;
     padding: 30px;
 }
 
+.music-and-note {
+    display: flex;
+    flex-direction: row;
+}
+
 .music-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 30px;
+    max-width: 700px;
 }
 
 .tags-container {
@@ -30,4 +38,21 @@
 
 .video {
     margin-bottom: 20px;
+}
+
+.text-note-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+#movie-note {
+    text-align: center;
+    max-width: 500px;
+}
+
+#movie-tags {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
 }

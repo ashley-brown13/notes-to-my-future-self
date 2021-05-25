@@ -64,7 +64,7 @@ const CreateNotePage = () => {
                                 <p>Rainbow</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" alt="background-choice" src="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://wallpaperaccess.com/full/807102.png"/>
                                 <p>Galaxy</p>
                             </div>
                         </div>
@@ -136,7 +136,7 @@ const CreateNotePage = () => {
                     >
                         <option value="">--Please choose an option--</option>
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
-                        <option value="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg">Galaxy</option>
+                        <option value="https://wallpaperaccess.com/full/807102.png">Galaxy</option>
                         <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
                         <option value="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg">Yellow</option>
                         <option value="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg">Pink</option>
@@ -172,7 +172,7 @@ const CreateNotePage = () => {
                                 <p>Rainbow</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" alt="background-choice" src="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://wallpaperaccess.com/full/807102.png"/>
                                 <p>Galaxy</p>
                             </div>
                         </div>
@@ -244,7 +244,7 @@ const CreateNotePage = () => {
                     >
                         <option value="">--Please choose an option--</option>
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
-                        <option value="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg">Galaxy</option>
+                        <option value="https://wallpaperaccess.com/full/807102.png">Galaxy</option>
                         <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
                         <option value="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg">Yellow</option>
                         <option value="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg">Pink</option>
@@ -289,7 +289,7 @@ const CreateNotePage = () => {
                                 <p>Rainbow</p>
                             </div>
                             <div>
-                                <img className="background-thumbnail" alt="background-choice" src="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg"/>
+                                <img className="background-thumbnail" alt="background-choice" src="https://wallpaperaccess.com/full/807102.png"/>
                                 <p>Galaxy</p>
                             </div>
                         </div>
@@ -361,7 +361,7 @@ const CreateNotePage = () => {
                     >
                         <option value="">--Please choose an option--</option>
                         <option value="https://wallpapercave.com/wp/wp3477365.jpg">Rainbow</option>
-                        <option value="https://png.pngtree.com/thumb_back/fw800/background/20200805/pngtree-purple-and-blue-nebula-galaxy-background-image_386406.jpg">Galaxy</option>
+                        <option value="https://wallpaperaccess.com/full/807102.png">Galaxy</option>
                         <option value="https://www.ppt-backgrounds.net/thumbs/pastel-clouds-presentation-templates.jpeg">Clouds</option>
                         <option value="https://img.wallpapersafari.com/desktop/1920/1080/77/63/WurYBF.jpg">Yellow</option>
                         <option value="https://img.wallpapersafari.com/desktop/1280/1024/63/22/yJZV4E.jpg">Pink</option>
