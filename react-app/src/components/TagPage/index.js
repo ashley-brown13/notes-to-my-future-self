@@ -50,8 +50,8 @@ const TagPage = () => {
                 </div>
                 <button type="submit" className="new-tag-submit">Add Tag</button>
             </form>
+            <h1 className="tag-page-header">My Tags</h1>
             <div className="tags-container">
-                <h1 className="tag-page-header">My Tags</h1>
                 {tags && tags.tags.map((tag) => (
                     <div className="tag-container">
                         <a href={`/tags/${tag.id}`}>
