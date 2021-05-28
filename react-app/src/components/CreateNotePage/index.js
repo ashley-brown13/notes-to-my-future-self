@@ -413,7 +413,7 @@ const CreateNotePage = () => {
                     </select>
                 </form>
             </div>
-            <div>
+            <div className="create-note-body">
                 {content}
             </div>
         </div>

@@ -13,6 +13,7 @@ import TextNotesPage from './components/TextNotesPage';
 import MusicNotesPage from './components/MusicNotesPage';
 import VideoNotesPage from './components/VideoNotesPage';
 import NavBar from "./components/NavBar";
+import Footer from './components/Footer'
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 // import { authenticate } from "./services/auth";
 import { authenticate } from "./store/session";
@@ -71,6 +72,7 @@ function App() {
           <SplashPage />
         </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }

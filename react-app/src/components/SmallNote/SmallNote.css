@@ -1,7 +1,21 @@
 .small-note-container {
     max-width: 300px;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#whole-small-note {
+    box-shadow: 10px 5px 5px lightgray;
+    min-height: 300px;
+    max-height: 300px;
+    overflow: scroll;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
+}
+
+#whole-small-note:hover {
+    box-shadow: 20px 10px 10px lightgray;
 }

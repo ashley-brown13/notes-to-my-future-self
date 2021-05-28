@@ -4,7 +4,7 @@ import './SmallNote.css'
 const SmallNote = ({note}) => {
     return (
         <a href={`/notes/${note.id}`}>
-            <div className="small-note-container"
+            <div className="small-note-container" id="whole-small-note"
                 style={{
                     backgroundImage: `url(${note.background})`
                     }}
