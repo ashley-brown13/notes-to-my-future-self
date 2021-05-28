@@ -4,3 +4,7 @@
     flex-wrap: wrap;
     margin-top: 60px;
 }
+
+ .all-tag-notes {
+    min-height: 100vh;
+ }

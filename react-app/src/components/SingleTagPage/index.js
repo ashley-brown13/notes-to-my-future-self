@@ -16,10 +16,12 @@ const SingleTagPage = () => {
     }, [tagId]);
 
     return (
-        <div className="tag-notes-page">
-            {tag && tag.notes.map((note) => (
-                <SmallNote note={note}/>
-            ))}
+        <div className="all-tag-notes">
+            <div className="tag-notes-page">
+                {tag && tag.notes.map((note) => (
+                    <SmallNote note={note}/>
+                ))}
+            </div>
         </div>
     )
 
