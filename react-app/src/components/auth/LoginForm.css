@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: flex-end;
     max-width: 400px;
+    max-height: 150px;
     margin-top: 60px;
     background-color: #D7ADE6;
     padding: 60px;
@@ -18,7 +19,7 @@
 .login-page {
     display: flex;
     justify-content: center;
-    margin-bottom: 205px;
+    min-height: 71vh;
 }
 
 .login-label-input {

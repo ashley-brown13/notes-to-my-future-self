@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     max-width: 400px;
+    max-height: 250px;
     margin-top: 60px;
     background-color: #D7ADE6;
     padding: 60px;
@@ -41,5 +42,5 @@
 .total-signup-page {
     display: flex;
     justify-content: center;
-    margin-bottom: 95px;
+    min-height: 71vh;
 }
