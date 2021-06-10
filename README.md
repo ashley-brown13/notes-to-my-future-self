@@ -21,12 +21,12 @@ https://github.com/ashley-brown13/notes-to-my-future-self/wiki
 
 ### Notes
 
-Authenticated users can create text, music, and video notes. They have the option to at a greeting and ending, as well as select from a myriad of background choices.
+Authenticated users can create text, music, and video notes. They have the option to at a greeting and ending, as well as select from a myriad of background choices. It was really important to me to give choices in design to the user, as this is their online memory box.
 
 ![Note Creation Page](https://github.com/ashley-brown13/notes-to-my-future-self/blob/main/react-app/public/images/NoteCreation.png)
 
 ### Tags
 
-Authenticated users can create tags, and append as many as they wish to their notes. This allows for users to easily find notes through category.
+Authenticated users can create tags, and append as many as they wish to their notes. This allows for users to easily sort their memories into categories, which supports easy finding of the notes. Part of the reason I designed the application was the idea that people can look for certain notes depending on how they want to feel at the moment. For example, if the user was feeling sad, maybe they want to look at memories stored under a tag such as "Laugh" or "Made Me Smile."
 
 ![Tags](https://github.com/ashley-brown13/notes-to-my-future-self/blob/main/react-app/public/images/Tags.png)
