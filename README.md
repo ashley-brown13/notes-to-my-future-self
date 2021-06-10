@@ -27,6 +27,6 @@ Authenticated users can create text, music, and video notes. They have the optio
 
 ### Tags
 
-Authenticated users can create tags, and append as many as they wish to their notes. This allows for users to easily sort their memories into categories, which supports easy finding of the notes. Part of the reason I designed the application was the idea that people can look for certain notes depending on how they want to feel at the moment. For example, if the user was feeling sad, maybe they want to look at memories stored under a tag such as "Laugh" or "Made Me Smile."
+Authenticated users can create tags, and append as many as they wish to their notes. This allows for users to easily sort their memories into categories, which supports easy finding of the notes. Part of the reason I designed the application was the idea that people can look for certain notes depending on how they want to feel at the moment. For example, if the user was feeling sad, maybe they want to look at memories stored under a tag such as Laugh or Made Me Smile.
 
 ![Tags](https://github.com/ashley-brown13/notes-to-my-future-self/blob/main/react-app/public/images/Tags.png)
