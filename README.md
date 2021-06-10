@@ -16,3 +16,17 @@ https://github.com/ashley-brown13/notes-to-my-future-self/wiki
 * SQLAlchemy
 * React
 * Redux
+
+## Key Features
+
+### Notes
+
+Authenticated users can create text, music, and video notes. They have the option to at a greeting and ending, as well as select from a myriad of background choices.
+
+![Note Creation Page](https://github.com/ashley-brown13/notes-to-my-future-self/blob/main/react-app/public/images/NoteCreation.png)
+
+### Tags
+
+Authenticated users can create tags, and append as many as they wish to their notes. This allows for users to easily find notes through category.
+
+![Tags](https://github.com/ashley-brown13/notes-to-my-future-self/blob/main/react-app/public/images/Tags.png)
