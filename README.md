@@ -60,12 +60,12 @@ const notesReducer = (state = initialState, action) => {
 ## Instructions
 After cloning the repository to your local machine, follow the instructions below to start the app:
 
->1. In the frontend folder, run `npm install` to install all frontend dependencies for the app.
->2. In the backend folder, run `npm install` to install all backend dependencies for the app.
->3. While in the backend folder, make a .env file based on the .env.example (add values to the empty places).
->4. Create the user role (matching information above) in psql with `CREATEDB` attribute.
->5. `npx dotenv sequelize db:create`
->6. `npx dotenv sequelize db:migrate`
->7. `npx dotenv sequelize db:seed:all`
->8. In the backend folder, `npm start` to run the server.
+>1. In the root folder, run the following `pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt`
+>2. Make a .env file based on the .env.example (add values where required)
+>3. Create your PostgreSQL user, password, and database. The information must match your .env file.
+>4. Enter your shell enviroment with `pipenv shell`
+>5. `flask db upgrade`
+>6. `flask seed all`
+>7. `flask run`
+>8. In the react-app folder, run `npm install` to install all frontend dependencies.
 >9. In the frontend folder, `npm start` to start the react app.
