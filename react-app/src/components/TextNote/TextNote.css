@@ -17,12 +17,13 @@
 }
 
 .note-button {
-    height: 30px;
-    border: 1px solid black;
+    height: 40px;
     background-color: #D7ADE6;
     font-weight: lighter;
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    padding: 10px;
 }
 
 .note-buttons {
