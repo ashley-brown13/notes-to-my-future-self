@@ -47,7 +47,7 @@ const NavBar = () => {
         content = (
             <div className="user-buttons">
                 <NavLink to="/notes/create" exact={true} activeClassName="active" className="user-link">
-                    Create a Note
+                    <img src="" />
                 </NavLink>
                 <NavLink to="/tags" exact={true} activeClassName="active" className="user-link">
                     Tags
