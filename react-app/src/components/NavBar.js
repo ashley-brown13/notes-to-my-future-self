@@ -4,6 +4,11 @@ import  { useDispatch } from "react-redux";
 import LogoutButton from './auth/LogoutButton';
 import { useSelector } from "react-redux";
 import { login } from "../store/session";
+import addNote from "../images/add.png";
+import tagsIcon from "../images/hashtag.png";
+import notesIcon from "../images/post-it.png";
+import spotifyIcon from "../images/spotify64.png";
+import videoIcon from "../images/youtube64.png";
 import './NavBar.css'
 
 
@@ -47,19 +52,19 @@ const NavBar = () => {
         content = (
             <div className="user-buttons">
                 <NavLink to="/notes/create" exact={true} activeClassName="active" className="user-link">
-                    <img src="" />
+                    <img src={addNote} alt="add note icon" />
                 </NavLink>
                 <NavLink to="/tags" exact={true} activeClassName="active" className="user-link">
-                    Tags
+                    <img src={tagsIcon} alt="tag icon" />
                 </NavLink>
                 <NavLink to="/notes/text" exact={true} activeClassName="active" className="user-link">
-                    Text Notes
-                </NavLink>
-                <NavLink to="/notes/music" exact={true} activeClassName="active" className="user-link">
-                    Music Notes
+                    <img src={notesIcon} alt="notes icon" />
                 </NavLink>
                 <NavLink to="/notes/video" exact={true} activeClassName="active" className="user-link">
-                    Video Notes
+                    <img src={videoIcon} alt="video icon" />
+                </NavLink>
+                <NavLink to="/notes/music" exact={true} activeClassName="active" className="user-link">
+                    <img src={spotifyIcon} alt="spotify icon" />
                 </NavLink>
                 <div>
                     <LogoutButton />

@@ -6,6 +6,7 @@
     justify-content: center;
     border-radius: 10px;
     box-shadow: 2px 3px 2px #3f414183;
+    font-family: 'Chelsea Market', cursive;
 }
 
 .text-info-container {
@@ -23,7 +24,7 @@
     background-color: white;
     font-weight: lighter;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Chelsea Market', cursive;
     border: none;
     padding: 10px;
     border-radius: 5px;
