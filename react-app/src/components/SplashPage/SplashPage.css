@@ -1,26 +1,28 @@
 .splash-page {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin-top: 60px;
+    min-width: 90%;
 }
 
 .splash-image {
     max-width: 1000px;
-    max-height: 500px;
-    box-shadow: 5px 5px 5px grey;
+    max-height: 590px;
     border-radius: 10px;
 }
 
 .splash-paragraph {
-    max-width: 900px;
-    font-family: 'Francois One', sans-serif;
+    max-width: 380px;
+    font-family: 'Special Elite', cursive;
     background-color: #BCE6AD;
-    margin-top: 60px;
     padding-left: 30px;
     padding-right: 30px;
-    font-size: 25px;
-    box-shadow: 5px 5px 5px #BCE6AD;
+    margin-right: 20px;
+    font-size: 31px;
+    border-radius: 10px;
 }
 
 .splash-signup {
