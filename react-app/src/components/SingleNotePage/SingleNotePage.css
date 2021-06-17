@@ -40,10 +40,28 @@
     margin-bottom: 20px;
 }
 
-.text-note-container{
+.text-music-note-container{
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+    max-width: 700px;
+    max-height: 800px;
+    background-size: cover;
+    justify-content: center;
+    border-radius: 10px;
+    font-family: 'Chelsea Market', cursive;
+}
+
+.text-video-note-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  max-width: 700px;
+  max-height: 800px;
+  background-size: cover;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: 'Chelsea Market', cursive;
 }
 
 #movie-note {
@@ -59,4 +77,8 @@
 
 .text-note {
     margin-bottom: 200px;
+}
+
+h1 {
+  font-family: 'Chelsea Market', cursive;
 }

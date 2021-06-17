@@ -43,7 +43,7 @@ const SingleNotePage = () => {
                         </div>
                         <div className="music-and-note">
                             <iframe src={note.fixedLink} title={note.note.title} className="music-player" width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                            <div className="text-note-container">
+                            <div className="text-music-note-container">
                                 <h4>{note.note.greeting}</h4>
                                 <div>{note.note.noteBody}</div>
                                 <h4>{note.note.closing}</h4>
@@ -74,7 +74,7 @@ const SingleNotePage = () => {
                             <h1>{note.note.title}</h1>
                         </div>
                         <iframe width="560" height="315" className="video" src={note.fixedVideoLink} title={note.note.title} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        <div className="text-note-container" id="movie-note">
+                        <div className="text-video-note-container" id="movie-note">
                             <h4>{note.note.greeting}</h4>
                             <div>{note.note.noteBody}</div>
                             <h4>{note.note.closing}</h4>
