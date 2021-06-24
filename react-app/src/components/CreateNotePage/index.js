@@ -404,6 +404,7 @@ const CreateNotePage = () => {
                     <select id="note-types"
                         type="text"
                         name="setNoteType"
+                        className="note-type-picker"
                         value={noteType}
                         onChange={(e) => setNoteType(e.target.value)}>
                         <option value="">--Please choose an option--</option>
