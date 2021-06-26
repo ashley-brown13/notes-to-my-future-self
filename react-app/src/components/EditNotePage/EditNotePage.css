@@ -47,18 +47,17 @@
     width: 400px;
     height: 100px;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+    font-family: 'Chelsea Market', cursive;
 
 .new-note-select-input {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Chelsea Market', cursive;
     text-align-last: center;
     height: 30px;
     font-size: 20px;
 }
 
 .new-note-select-input-multiple {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Chelsea Market', cursive;
     font-size: 20px;
 }
 
