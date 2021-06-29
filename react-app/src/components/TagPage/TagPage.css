@@ -3,19 +3,19 @@
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Chelsea Market', cursive;
 }
 
 .add-tag-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
     max-width: 700px;
-    background-color: #BCE6AD;
+    background-color: #D7ADE6;
     border-radius: 10px;
 }
 
@@ -29,14 +29,19 @@
     width: 200px;
     height: 30px;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Chelsea Market', cursive;
 }
 
 .new-tag-submit {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #D7ADE6;
-    font-size: 20px;
-    margin-top: 20px;
+  height: 40px;
+  background-color: white;
+  font-weight: lighter;
+  font-size: 20px;
+  font-family: 'Chelsea Market', cursive;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 30px;
 }
 
 .tag-container {
@@ -47,7 +52,8 @@
     height: 150px;
     justify-content: space-between;
     font-size: 20px;
-    border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 10px;
     padding-left:10px;
     padding-right: 10px;
     margin-bottom: 10px;
@@ -62,30 +68,23 @@ a {
 .tags-container {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
     justify-content: center;
     margin-top: 10px;
 }
 
 .tag-delete-button {
-    height: 30px;
+    background-color: #ED3833;
+    font-weight: lighter;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
     width: 150px;
-    border: 1px solid black;
-    background-color: #D7ADE6;
     font-weight: lighter;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 10px;
-}
-
-.tag-edit-button {
-    height: 30px;
-    width: 150px;
-    border: 1px solid black;
-    background-color: #D7ADE6;
-    font-weight: lighter;
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 10px;
+    font-family: 'Chelsea Market', cursive;
+    margin-bottom: 20px;
 }
 
 .tag-page-header {
@@ -95,7 +94,7 @@ a {
 .new-note-submit {
     height: 30px;
     background-color: #D7ADE6;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Chelsea Market', cursive;
     font-size: 20px;
     margin-top: 10px;
 }
