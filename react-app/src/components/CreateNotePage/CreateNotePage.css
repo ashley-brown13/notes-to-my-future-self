@@ -48,6 +48,7 @@
 }
 
 .new-note-input {
+    font-family: 'Chelsea Market', cursive;
     height: 30px;
     width: 300px;
 }
