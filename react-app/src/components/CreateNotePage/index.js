@@ -45,12 +45,16 @@ const CreateNotePage = () => {
           background,
           spotifyLink,
           videoLink,
+          image,
           tags
         };
+
+      setImageLoading(true);
 
       let newNote = await dispatch(addNewNote(payload));
       await dispatch(getNote(newNote.id))
 
+      setImageLoading(false);
       if(newNote){
           history.push(`/notes/${newNote.id}`)
       }
@@ -505,6 +509,15 @@ const CreateNotePage = () => {
                             return <option key={tag.id} value={tag.id}>{tag.tagName}</option>
                         })}
                     </select>
+                    <form onSubmit={handleSubmit}>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={updateImage}
+                      />
+                      <button type="submit">Upload Photo</button>
+                      {(imageLoading)&& <p>Loading...</p>}
+                  </form>
                 <button type="submit" className="new-note-submit">Create Note</button>
                 </form>
             </div>
