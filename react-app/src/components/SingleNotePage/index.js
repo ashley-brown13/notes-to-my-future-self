@@ -94,7 +94,37 @@ const SingleNotePage = () => {
                     </div>
                 </div>
             )
-        } else {
+        } else if (note.note.imageURL){
+          content = (
+              <div className="video-note-page">
+                  <div className="music-container" style={{
+                      backgroundImage: `url(${note.note.background})`
+                  }}>
+                      <div>
+                          <h1>{note.note.title}</h1>
+                      </div>
+                      <img src={note.note.imageURL}/>
+                      <div className="text-video-note-container" id="movie-note">
+                          <h4>{note.note.greeting}</h4>
+                          <div>{note.note.noteBody}</div>
+                          <h4>{note.note.closing}</h4>
+                          <div>{note.note.updatedAt.slice(5, 16)}</div>
+                          <div className="note-tags" id="movie-tags">
+                              {note.tags.map((tag) => {
+                                  return <a href={`/tags/${tag.id}`}>#{tag.tagName}&nbsp;</a>
+                              })}
+                          </div>
+                          <div className="note-buttons">
+                              <form onSubmit={handleDelete}>
+                                  <button type="submit" className="note-button">Delete Note</button>
+                              </form>
+                              <a href={`/notes/${note.id}/edit`}><button className="note-button">Edit Note</button></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          )
+      } else {
             content = (
                 <div className="text-note">
                     <TextNote note={note.note} tags={note.tags}/>

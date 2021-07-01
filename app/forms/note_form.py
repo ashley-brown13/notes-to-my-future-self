@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField
+from wtforms import StringField, SelectField, FileField
 from wtforms.validators import DataRequired
 
 
@@ -11,3 +11,4 @@ class NoteForm(FlaskForm):
     background = StringField('Background', validators=[DataRequired()])
     spotifyLink = StringField('Spotify Link')
     videoLink = StringField('YouTube Link')
+    imageURL = FileField('Image URL')

@@ -132,6 +132,9 @@ const notesReducer = (state = initialState, action) => {
             let fixedVideoLink = generateVideo(newState.note.note.videoLink)
             newState.note.fixedVideoLink = fixedVideoLink
         }
+        if(newState.note.note.imageURL){
+          newState.note.imageURL = newState.note.note.imageURL
+      }
         return newState
     case LOAD_ALL:
         newState = Object.assign({}, state);

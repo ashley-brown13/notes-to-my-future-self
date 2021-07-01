@@ -46,7 +46,7 @@ const CreateNotePage = () => {
     setImageLoading(true);
 
     let url = await dispatch(uploadNoteImage(formData))
-    setImageURL(url.url)
+    await setImageURL(url.url)
     setImageLoading(false)
 }
 
@@ -456,7 +456,7 @@ const CreateNotePage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="photo-note">
+                <div className="photo-note-form">
                 <form onSubmit={handleImageSubmit}>
                   <label className="add-note-label">Image:</label>
                       <input
