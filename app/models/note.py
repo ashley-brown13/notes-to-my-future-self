@@ -15,6 +15,7 @@ class Note(db.Model):
     updatedAt = db.Column(db.Date, nullable=False)
     spotifyLink = db.Column(db.String(256), nullable=True)
     videoLink = db.Column(db.String(256), nullable=True)
+    photoLink = db.Column(db.String(512), nullable=True)
     userId = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
 
     tags = db.relationship("Tag", secondary=tagsOnNotes, back_populates="notes")
