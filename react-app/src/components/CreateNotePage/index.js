@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addNewNote, getNote } from '../../store/notes';
+import { addNewNote, getNote, uploadNoteImage } from '../../store/notes';
 import { getTags } from '../../store/tags';
 import { useHistory } from 'react-router-dom';
 import './CreateNotePage.css'
@@ -16,6 +16,7 @@ const CreateNotePage = () => {
     const [background, setBackground] = useState("")
     const [spotifyLink, setSpotifyLink] = useState(null)
     const [videoLink, setVideoLink] = useState(null)
+    const [imageURL, setImageURL] = useState(null)
     const [image, setImage] = useState(null);
     const [imageLoading, setImageLoading] = useState(false);
     const [tags, setTags] = useState([])
@@ -30,10 +31,24 @@ const CreateNotePage = () => {
         setTags(value);
       }
 
-    const handlePhoto = (e) => {
+    const updateImage = (e) => {
       const file = e.target.files[0];
       setImage(file);
   }
+
+  const handleImageSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("image", image);
+
+    // aws uploads can be a bit slow—displaying
+    // some sort of loading message is a good idea
+    setImageLoading(true);
+
+    let url = await dispatch(uploadNoteImage(formData))
+    setImageURL(url.url)
+    setImageLoading(false)
+}
 
     const handleSubmit= async (e) => {
       e.preventDefault();
@@ -45,16 +60,14 @@ const CreateNotePage = () => {
           background,
           spotifyLink,
           videoLink,
-          image,
+          imageURL,
           tags
         };
 
-      setImageLoading(true);
 
       let newNote = await dispatch(addNewNote(payload));
       await dispatch(getNote(newNote.id))
 
-      setImageLoading(false);
       if(newNote){
           history.push(`/notes/${newNote.id}`)
       }
@@ -443,6 +456,17 @@ const CreateNotePage = () => {
                         </div>
                     </div>
                 </div>
+                <div className="photo-note">
+                <form onSubmit={handleImageSubmit}>
+                  <label className="add-note-label">Image:</label>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={updateImage}
+                      />
+                      <button type="submit">Upload Photo</button>
+                      {(imageLoading)&& <p>Loading...</p>}
+                  </form>
                 <form onSubmit={handleSubmit} className="note-form">
                 <label className="add-note-label">Title:</label>
                     <input
@@ -509,17 +533,9 @@ const CreateNotePage = () => {
                             return <option key={tag.id} value={tag.id}>{tag.tagName}</option>
                         })}
                     </select>
-                    <form onSubmit={handleSubmit}>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        onChange={updateImage}
-                      />
-                      <button type="submit">Upload Photo</button>
-                      {(imageLoading)&& <p>Loading...</p>}
-                  </form>
                 <button type="submit" className="new-note-submit">Create Note</button>
                 </form>
+                </div>
             </div>
         )
       }

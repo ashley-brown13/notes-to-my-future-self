@@ -2,6 +2,14 @@ const LOAD_ONE = 'notes/LOAD_ONE';
 const LOAD_ALL = 'notes/LOAD_ALL';
 const ADD_ONE = 'notes/ADD_ONE'
 const REMOVE_ONE = "notes/REMOVE_ONE";
+const LOAD_IMAGE = "notes/LOAD_IMAGE"
+
+const loadImage = (url) => {
+  return {
+    type: LOAD_IMAGE,
+    url: url,
+  };
+};
 
 const loadOne = (note) => {
   return {
@@ -39,6 +47,17 @@ export const addNewNote = (payload) => async dispatch => {
     const note = await response.json();
     dispatch(addNote(note));
     return note;
+}
+
+export const uploadNoteImage = (payload) => async dispatch => {
+  const response = await fetch(`/api/images/upload`, {
+    method: "POST",
+    body: payload,
+  });
+  if (!response.ok) throw response;
+  const url = await response.json();
+  dispatch(loadImage(url));
+  return url;
 }
 
 export const editNote = (payload, noteId) => async dispatch => {
@@ -97,7 +116,7 @@ export const deleteNote = (noteId) => async (dispatch) => {
       return copy + first + second
   }
 
-const initialState = { note: null, notes: null }
+const initialState = { note: null, notes: null, url: null }
 
 const notesReducer = (state = initialState, action) => {
   let newState;
@@ -124,6 +143,10 @@ const notesReducer = (state = initialState, action) => {
         return newState
     case REMOVE_ONE:
         return {note: null}
+    case LOAD_IMAGE:
+        newState = Object.assign({}, state);
+        newState.url = action.url
+        return newState
     default:
       return state;
   }
