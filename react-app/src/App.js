@@ -12,6 +12,7 @@ import SingleNotePage from './components/SingleNotePage';
 import TextNotesPage from './components/TextNotesPage';
 import MusicNotesPage from './components/MusicNotesPage';
 import VideoNotesPage from './components/VideoNotesPage';
+import PhotoNotesPage from './components/PhotoNotesPage';
 import NavBar from "./components/NavBar";
 import Footer from './components/Footer'
 import ProtectedRoute from "./components/auth/ProtectedRoute";
@@ -58,6 +59,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/notes/video" exact={true}>
           <VideoNotesPage />
+        </ProtectedRoute>
+        <ProtectedRoute path="/notes/photo" exact={true}>
+          <PhotoNotesPage />
         </ProtectedRoute>
         <ProtectedRoute path="/notes/create" exact={true}>
           <CreateNotePage />

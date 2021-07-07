@@ -19,6 +19,18 @@
 .note-form {
     display: flex;
     flex-direction: column;
+    border-radius: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #BCE6AD;
+    font-family: 'Chelsea Market', cursive;
+}
+
+.photo-specific-note-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .photo-note-form {

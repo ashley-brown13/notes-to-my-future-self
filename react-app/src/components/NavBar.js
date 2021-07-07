@@ -9,6 +9,7 @@ import tagsIcon from "../images/hashtag.png";
 import notesIcon from "../images/post-it.png";
 import spotifyIcon from "../images/spotify64.png";
 import videoIcon from "../images/youtube64.png";
+import photoIcon from "../images/photoIcon.png"
 import './NavBar.css'
 
 
@@ -65,6 +66,9 @@ const NavBar = () => {
                 </NavLink>
                 <NavLink to="/notes/music" exact={true} activeClassName="active" className="user-link">
                     <img src={spotifyIcon} alt="spotify icon" />
+                </NavLink>
+                <NavLink to="/notes/photo" exact={true} activeClassName="active" className="user-link">
+                    <img src={photoIcon} alt="spotify icon" />
                 </NavLink>
                 <div>
                     <LogoutButton />

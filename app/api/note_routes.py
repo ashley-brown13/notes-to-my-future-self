@@ -14,15 +14,18 @@ def get_notes():
     textNotes = []
     playlistNotes = []
     videoNotes = []
+    photoNotes = []
     for note in notes:
         fixedNote = note.to_dict()
         if note.spotifyLink:
             playlistNotes.append(fixedNote)
         elif note.videoLink:
             videoNotes.append(fixedNote)
+        elif note.imageURL:
+            photoNotes.append(fixedNote)
         else:
             textNotes.append(fixedNote)
-    return {"textNotes": textNotes, "playlistNotes": playlistNotes, "videoNotes": videoNotes}
+    return {"textNotes": textNotes, "playlistNotes": playlistNotes, "videoNotes": videoNotes, "photoNotes": photoNotes}
 
 
 @note_routes.route('/create', methods=['POST'])

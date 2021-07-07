@@ -20,7 +20,7 @@ const SingleNotePage = () => {
     const handleDelete = async (e) => {
         e.preventDefault();
 
-        let deletedNote = await dispatch(deleteNote(note.id));
+        let deletedNote = await dispatch(deleteNote(noteId));
 
         if (deletedNote && deletedNote.spotifyLink) {
             history.push(`/notes/music`);
@@ -57,7 +57,7 @@ const SingleNotePage = () => {
                                     <form onSubmit={handleDelete}>
                                         <button type="submit" className="note-button">Delete Note</button>
                                     </form>
-                                    <a href={`/notes/${note.id}/edit`}><button className="note-button">Edit Note</button></a>
+                                    <a href={`/notes/${note.note.id}/edit`}><button className="note-button">Edit Note</button></a>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@ const SingleNotePage = () => {
                                 <form onSubmit={handleDelete}>
                                     <button type="submit" className="note-button">Delete Note</button>
                                 </form>
-                                <a href={`/notes/${note.id}/edit`}><button className="note-button">Edit Note</button></a>
+                                <a href={`/notes/${note.note.id}/edit`}><button className="note-button">Edit Note</button></a>
                             </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ const SingleNotePage = () => {
                               <form onSubmit={handleDelete}>
                                   <button type="submit" className="note-button">Delete Note</button>
                               </form>
-                              <a href={`/notes/${note.id}/edit`}><button className="note-button">Edit Note</button></a>
+                              <a href={`/notes/${note.note.id}/edit`}><button className="note-button">Edit Note</button></a>
                           </div>
                       </div>
                   </div>

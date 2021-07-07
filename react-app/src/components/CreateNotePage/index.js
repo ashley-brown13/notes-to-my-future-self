@@ -467,7 +467,7 @@ const CreateNotePage = () => {
                       <button type="submit">Upload Photo</button>
                       {(imageLoading)&& <p>Loading...</p>}
                   </form>
-                <form onSubmit={handleSubmit} className="note-form">
+                <form onSubmit={handleSubmit} className="photo-specific-note-form">
                 <label className="add-note-label">Title:</label>
                     <input
                         type="text"

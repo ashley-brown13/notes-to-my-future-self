@@ -1,0 +1,7 @@
+.photo-notes-page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  min-height: 100vh;
+}

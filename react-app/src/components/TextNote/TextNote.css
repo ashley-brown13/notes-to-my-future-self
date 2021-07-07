@@ -28,6 +28,7 @@
     border: none;
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 2px 3px 2px #3f414183;
 }
 
 .note-buttons {
