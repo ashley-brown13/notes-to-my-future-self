@@ -103,7 +103,7 @@ const SingleNotePage = () => {
                       <div>
                           <h1>{note.note.title}</h1>
                       </div>
-                      <img src={note.note.imageURL}/>
+                      <img className="image" src={note.note.imageURL}/>
                       <div className="text-video-note-container" id="movie-note">
                           <h4>{note.note.greeting}</h4>
                           <div>{note.note.noteBody}</div>
